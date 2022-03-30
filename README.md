@@ -1,6 +1,6 @@
-# kisok server
+# Web server in windows
 
-1. run nginx as a server for the kiosk pages
+1. run nginx as a server
 2. checkout https://github.com/sheggi/win-service-nginx
 3. checkout https://github.com/winsw/winsw
 
@@ -9,18 +9,22 @@
 
 1. Clone the proejct into c:/
 
-git clone https://github.com/chet-cloud/win-nginx-service.git -o c:/nginx
+```shell
+git clone https://github.com/chet-cloud/win-nginx-service.git c:/nginx
+```
 
+2. Install, start, stop, status, and restart the service
 
-2. install the service
+    - open cmd.exe and switch to the directory - c:/nginx
 
-open cmd.exe and switch to the directory - c:/nginx
+    - input the following commands
 
+```shell
+    nginx-service install
+    nginx-service start
+    nginx-service stop
+    nginx-service status
+    nginx-service restart
+```
 
-- nginx-service install
-- nginx-service start
-- nginx-service stop
-- nginx-service status
-- nginx-service restart
-
-or You can open the Services (win+run>services.msc) and start Nginx after install the service
+or You can open the Services (win+run>services.msc) and operate on nginx service after install the service
